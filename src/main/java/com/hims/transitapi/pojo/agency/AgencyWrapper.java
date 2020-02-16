@@ -1,4 +1,4 @@
-package com.hims.transitapi.agency;
+package com.hims.transitapi.pojo.agency;
 
 import lombok.Getter;
 import lombok.Setter;

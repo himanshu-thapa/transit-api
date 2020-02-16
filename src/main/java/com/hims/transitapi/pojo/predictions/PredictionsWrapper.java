@@ -1,4 +1,4 @@
-package com.hims.transitapi.predictions;
+package com.hims.transitapi.pojo.predictions;
 
 import lombok.Getter;
 import lombok.Setter;

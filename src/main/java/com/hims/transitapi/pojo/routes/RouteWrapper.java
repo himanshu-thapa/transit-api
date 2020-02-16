@@ -1,4 +1,4 @@
-package com.hims.transitapi.routes;
+package com.hims.transitapi.pojo.routes;
 
 import lombok.Getter;
 import lombok.Setter;

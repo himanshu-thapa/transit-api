@@ -1,10 +1,11 @@
-package com.hims.transitapi;
+package com.hims.transitapi.service.impl;
 
-import com.hims.transitapi.agency.AgencyWrapper;
+import com.hims.transitapi.pojo.agency.AgencyWrapper;
 import com.hims.transitapi.cmn.ApiResponse;
-import com.hims.transitapi.predictions.PredictionsWrapper;
-import com.hims.transitapi.route_details.RouteConfigWrapper;
-import com.hims.transitapi.routes.RouteWrapper;
+import com.hims.transitapi.pojo.predictions.PredictionsWrapper;
+import com.hims.transitapi.pojo.route_details.RouteConfigWrapper;
+import com.hims.transitapi.pojo.routes.RouteWrapper;
+import com.hims.transitapi.service.MainService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

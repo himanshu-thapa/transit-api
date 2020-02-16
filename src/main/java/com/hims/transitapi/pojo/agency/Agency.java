@@ -1,12 +1,13 @@
-package com.hims.transitapi.routes;
+package com.hims.transitapi.pojo.agency;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
-@Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Route {
+@Data
+public class Agency {
     private String title;
+    private String regionTitle;
     private String shortTitle;
     private String tag;
 }

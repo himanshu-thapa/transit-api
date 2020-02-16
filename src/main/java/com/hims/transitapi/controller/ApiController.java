@@ -1,11 +1,7 @@
-package com.hims.transitapi;
-
-import com.hims.transitapi.agency.AgencyWrapper;
+package com.hims.transitapi.controller;
 
 import com.hims.transitapi.cmn.ApiResponse;
-import com.hims.transitapi.predictions.PredictionsWrapper;
-import com.hims.transitapi.route_details.RouteConfigWrapper;
-import com.hims.transitapi.routes.RouteWrapper;
+import com.hims.transitapi.service.MainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api")
-public class MainController {
+public class ApiController {
     private MainService service;
 
     @Autowired
-    public MainController(MainService service) {
+    public ApiController(MainService service) {
         this.service = service;
     }
 
@@ -28,7 +24,7 @@ public class MainController {
     }
 
     @GetMapping("/agency/routes")
-    public ApiResponse allRoutesOfAgency(@RequestParam String agencyTag)  {
+    public ApiResponse allRoutesOfAgency(@RequestParam String agencyTag) {
         return this.service.allRoutesOfAgency(agencyTag);
     }
 
@@ -39,7 +35,7 @@ public class MainController {
 
     @GetMapping("/agency/stop/predictions")
     public ApiResponse timePredictionPerAgencyOfRouteForStop(@RequestParam String agencyTag, @RequestParam String routeTag,
-                                                                    @RequestParam String stopTag) {
+                                                             @RequestParam String stopTag) {
         return this.service.predictionsOfVehicleForStop(agencyTag, routeTag, stopTag);
     }
 }
