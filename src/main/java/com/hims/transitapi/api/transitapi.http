@@ -1,0 +1,25 @@
+# API GET ALL AGENCIES
+GET {{host-url}}//agency/all
+
+###
+
+# API GET ALL ROUTES OF AGENCY
+# RequestParam -> agency-tag
+GET {{host-url}}//agency/routes?agencyTag=mitwe
+
+###
+
+# API GET ALL ROUTE DETAILS OF ROUTE PER AGENCY
+# RequestParam -> agency-tag
+# RequestParam -> route-tag
+GET {{host-url}}//agency/route-details?agencyTag=mit&routeTag=boston
+
+###
+
+# API GET PREDICTIONS OF VEHICLE OF AGENCY FOR DEFINED ROUTE AND STOP POINT
+# RequestParam -> agency-tag
+# RequestParam -> route-tag
+# RequestParam -> stop-tag
+GET {{host-url}}//agency/stop/predictions?agencyTag=sf-muni&routeTag=N&stopTag=5205
+
+###
